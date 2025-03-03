@@ -1,4 +1,10 @@
 # Supported sites
+
+Below is a list of all extractors that are currently included with yt-dlp.
+If a site is not listed here, it might still be supported by yt-dlp's embed extraction or generic extractor.
+Not all sites listed here are guaranteed to work; websites are constantly changing and sometimes this breaks yt-dlp's support for them.
+The only reliable way to check if a site is supported is to try it.
+
  - **17live**
  - **17live:clip**
  - **1News**: 1news.co.nz article videos
@@ -129,6 +135,8 @@
  - **Bandcamp:album**
  - **Bandcamp:user**
  - **Bandcamp:weekly**
+ - **Bandlab**
+ - **BandlabPlaylist**
  - **BannedVideo**
  - **bbc**: [*bbc*](## "netrc machine") BBC
  - **bbc.co.uk**: [*bbc*](## "netrc machine") BBC iPlayer
@@ -169,6 +177,7 @@
  - **BilibiliCheese**
  - **BilibiliCheeseSeason**
  - **BilibiliCollectionList**
+ - **BiliBiliDynamic**
  - **BilibiliFavoritesList**
  - **BiliBiliPlayer**
  - **BilibiliPlaylist**
@@ -190,6 +199,7 @@
  - **blerp**
  - **blogger.com**
  - **Bloomberg**
+ - **Bluesky**
  - **BokeCC**
  - **BongaCams**
  - **Boosty**
@@ -247,7 +257,7 @@
  - **cbsnews:livevideo**: CBS News Live Videos
  - **cbssports**: (**Currently broken**)
  - **cbssports:embed**: (**Currently broken**)
- - **CCMA**
+ - **CCMA**: 3Cat, TV3 and Catalunya Ràdio
  - **CCTV**: 央视网
  - **CDA**: [*cdapl*](## "netrc machine")
  - **CDAFolder**
@@ -280,8 +290,6 @@
  - **cmt.com**: (**Currently broken**)
  - **CNBCVideo**
  - **CNN**
- - **CNNArticle**
- - **CNNBlogs**
  - **CNNIndonesia**
  - **ComedyCentral**
  - **ComedyCentralTV**
@@ -302,10 +310,6 @@
  - **CrowdBunker**
  - **CrowdBunkerChannel**
  - **Crtvg**
- - **crunchyroll**: [*crunchyroll*](## "netrc machine")
- - **crunchyroll:artist**: [*crunchyroll*](## "netrc machine")
- - **crunchyroll:music**: [*crunchyroll*](## "netrc machine")
- - **crunchyroll:playlist**: [*crunchyroll*](## "netrc machine")
  - **CSpan**: C-SPAN
  - **CSpanCongress**
  - **CtsNews**: 華視新聞
@@ -316,7 +320,8 @@
  - **curiositystream**: [*curiositystream*](## "netrc machine")
  - **curiositystream:collections**: [*curiositystream*](## "netrc machine")
  - **curiositystream:series**: [*curiositystream*](## "netrc machine")
- - **CWTV**
+ - **cwtv**
+ - **cwtv:movie**
  - **Cybrary**: [*cybrary*](## "netrc machine")
  - **CybraryCourse**: [*cybrary*](## "netrc machine")
  - **DacastPlaylist**
@@ -351,6 +356,7 @@
  - **DigitalConcertHall**: [*digitalconcerthall*](## "netrc machine") DigitalConcertHall extractor
  - **DigitallySpeaking**
  - **Digiteka**
+ - **Digiview**
  - **DiscogsReleasePlaylist**
  - **DiscoveryLife**
  - **DiscoveryNetworksDe**
@@ -373,6 +379,7 @@
  - **Dropbox**
  - **Dropout**: [*dropout*](## "netrc machine")
  - **DropoutSeason**
+ - **DrTalks**
  - **DrTuber**
  - **drtv**
  - **drtv:live**
@@ -391,6 +398,8 @@
  - **Ebay**
  - **egghead:course**: egghead.io course
  - **egghead:lesson**: egghead.io lesson
+ - **eggs:artist**
+ - **eggs:single**
  - **EinsUndEinsTV**: [*1und1tv*](## "netrc machine")
  - **EinsUndEinsTVLive**: [*1und1tv*](## "netrc machine")
  - **EinsUndEinsTVRecordings**: [*1und1tv*](## "netrc machine")
@@ -464,9 +473,9 @@
  - **fptplay**: fptplay.vn
  - **FranceCulture**
  - **FranceInter**
- - **FranceTV**
+ - **francetv**
+ - **francetv:site**
  - **francetvinfo.fr**
- - **FranceTVSite**
  - **Freesound**
  - **freespeech.org**
  - **freetv:series**
@@ -475,9 +484,6 @@
  - **FrontendMastersCourse**: [*frontendmasters*](## "netrc machine")
  - **FrontendMastersLesson**: [*frontendmasters*](## "netrc machine")
  - **FujiTVFODPlus7**
- - **Funimation**: [*funimation*](## "netrc machine")
- - **funimation:page**: [*funimation*](## "netrc machine")
- - **funimation:show**: [*funimation*](## "netrc machine")
  - **Funk**
  - **Funker530**
  - **Fux**
@@ -485,6 +491,7 @@
  - **Gab**
  - **GabTV**
  - **Gaia**: [*gaia*](## "netrc machine")
+ - **GameDevTVDashboard**: [*gamedevtv*](## "netrc machine")
  - **GameJolt**
  - **GameJoltCommunity**
  - **GameJoltGame**
@@ -500,7 +507,7 @@
  - **GediDigital**
  - **gem.cbc.ca**: [*cbcgem*](## "netrc machine")
  - **gem.cbc.ca:live**
- - **gem.cbc.ca:playlist**
+ - **gem.cbc.ca:playlist**: [*cbcgem*](## "netrc machine")
  - **Genius**
  - **GeniusLyrics**
  - **Germanupa**: germanupa.de
@@ -652,6 +659,8 @@
  - **Karaoketv**
  - **Katsomo**: (**Currently broken**)
  - **KelbyOne**: (**Currently broken**)
+ - **Kenh14Playlist**
+ - **Kenh14Video**
  - **Ketnet**
  - **khanacademy**
  - **khanacademy:unit**
@@ -685,9 +694,9 @@
  - **LastFMPlaylist**
  - **LastFMUser**
  - **LaXarxaMes**: [*laxarxames*](## "netrc machine")
- - **lbry**
- - **lbry:channel**
- - **lbry:playlist**
+ - **lbry**: odysee.com
+ - **lbry:channel**: odysee.com channels
+ - **lbry:playlist**: odysee.com playlists
  - **LCI**
  - **Lcp**
  - **LcpPlay**
@@ -785,10 +794,6 @@
  - **MicrosoftLearnSession**
  - **MicrosoftMedius**
  - **microsoftstream**: Microsoft Stream
- - **mildom**: Record ongoing live by specific user in Mildom
- - **mildom:clip**: Clip in Mildom
- - **mildom:​user:vod**: Download all VODs from specific user in Mildom
- - **mildom:vod**: VOD in Mildom
  - **minds**
  - **minds:channel**
  - **minds:group**
@@ -799,6 +804,7 @@
  - **MiTele**: mitele.es
  - **mixch**
  - **mixch:archive**
+ - **mixch:movie**
  - **mixcloud**
  - **mixcloud:playlist**
  - **mixcloud:user**
@@ -890,6 +896,8 @@
  - **nebula:video**: [*watchnebula*](## "netrc machine")
  - **NekoHacker**
  - **NerdCubedFeed**
+ - **Nest**
+ - **NestClip**
  - **netease:album**: 网易云音乐 - 专辑
  - **netease:djradio**: 网易云音乐 - 电台
  - **netease:mv**: 网易云音乐 - MV
@@ -1061,14 +1069,16 @@
  - **PhilharmonieDeParis**: Philharmonie de Paris
  - **phoenix.de**
  - **Photobucket**
+ - **PiaLive**
  - **Piapro**: [*piapro*](## "netrc machine")
- - **PIAULIZAPortal**: ulizaportal.jp - PIA LIVE STREAM
  - **Picarto**
  - **PicartoVod**
  - **Piksel**
  - **Pinkbike**
  - **Pinterest**
  - **PinterestCollection**
+ - **PiramideTV**
+ - **PiramideTVChannel**
  - **pixiv:sketch**
  - **pixiv:​sketch:user**
  - **Pladform**
@@ -1085,12 +1095,11 @@
  - **pluralsight**: [*pluralsight*](## "netrc machine")
  - **pluralsight:course**
  - **PlutoTV**: (**Currently broken**)
+ - **PlVideo**: Платформа
  - **PodbayFM**
  - **PodbayFMChannel**
  - **Podchaser**
  - **podomatic**: (**Currently broken**)
- - **Pokemon**
- - **PokemonWatch**
  - **PokerGo**: [*pokergo*](## "netrc machine")
  - **PokerGoCollection**: [*pokergo*](## "netrc machine")
  - **PolsatGo**
@@ -1161,6 +1170,7 @@
  - **RadioJavan**: (**Currently broken**)
  - **radiokapital**
  - **radiokapital:show**
+ - **RadioRadicale**
  - **RadioZetPodcast**
  - **radlive**
  - **radlive:channel**
@@ -1368,9 +1378,7 @@
  - **spotify**: Spotify episodes (**Currently broken**)
  - **spotify:show**: Spotify shows (**Currently broken**)
  - **Spreaker**
- - **SpreakerPage**
  - **SpreakerShow**
- - **SpreakerShowPage**
  - **SpringboardPlatform**
  - **Sprout**
  - **SproutVideo**
@@ -1396,6 +1404,8 @@
  - **StretchInternet**
  - **Stripchat**
  - **stv:player**
+ - **Subsplash**
+ - **subsplash:playlist**
  - **Substack**
  - **SunPorno**
  - **sverigesradio:episode**
@@ -1446,7 +1456,7 @@
  - **TeleQuebecSquat**
  - **TeleQuebecVideo**
  - **TeleTask**: (**Currently broken**)
- - **Telewebion**
+ - **Telewebion**: (**Currently broken**)
  - **Tempo**
  - **TennisTV**: [*tennistv*](## "netrc machine")
  - **TenPlay**: [*10play*](## "netrc machine")
@@ -1571,6 +1581,8 @@
  - **UFCTV**: [*ufctv*](## "netrc machine")
  - **ukcolumn**: (**Currently broken**)
  - **UKTVPlay**
+ - **UlizaPlayer**
+ - **UlizaPortal**: ulizaportal.jp
  - **umg:de**: Universal Music Deutschland (**Currently broken**)
  - **Unistra**
  - **Unity**: (**Currently broken**)
@@ -1588,8 +1600,6 @@
  - **Varzesh3**: (**Currently broken**)
  - **Vbox7**
  - **Veo**
- - **Veoh**
- - **veoh:user**
  - **Vesti**: Вести.Ru (**Currently broken**)
  - **Vevo**
  - **VevoPlaylist**
@@ -1643,8 +1653,6 @@
  - **Vimm:stream**
  - **ViMP**
  - **ViMP:Playlist**
- - **Vine**
- - **vine:user**
  - **Viously**
  - **Viqeo**: (**Currently broken**)
  - **Viu**
