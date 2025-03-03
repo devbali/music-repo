@@ -1,0 +1,53 @@
+{
+    "intermediate-dir": "Final",
+    "output-dir": "गीत",
+
+    "information-prompts": {
+        "name": "नाम",
+        "playlist": "प्लेलिस्ट",
+        "song-filename": "गीत.txt",
+        "info-filename": "इत्तिला.json",
+        "lyrics-filename": "बोल.txt",
+        "other-info": [
+            {
+                "name": "कलाकार",
+                "type": "list",
+                "metadata-name": "artist"
+            },
+            {   
+                "name": "गीतकार",
+                "type": "str",
+                "metadata-name": "composer"
+            },
+            {   
+                "name": "बोल",
+                "type": "str",
+                "metadata-name": "lyricist"
+            },
+            {   
+                "name": "फ़िल्म",
+                "type": "str",
+                "metadata-name": "album"
+            },
+            {
+                "name": "क़िस्म",
+                "type": "str",
+                "metadata-name": "genre"
+            },
+            {
+                "name": "साल",
+                "type": "str",
+                "metadata-name": "year"
+            }
+        ]
+    },
+
+    "playlist-exports": {
+        ".प्लेलिस्ट": {
+            "prefix-path": "/home/dev/Music/गीत/"
+        },
+        "प्लेलिस्ट": {
+            "prefix-path": "/storage/emulated/0/Music/"
+        }
+    }
+}

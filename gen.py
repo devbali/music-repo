@@ -1,12 +1,7 @@
 import os
 import json
 import shutil
-
-final = "Final"
-gen = "गीत"
-def exec (cmd):
-	print(f"CMD: {cmd}")
-	os.system(cmd)
+from . import final, gen, exec
 
 kisms = []
 playlists = {}
@@ -34,25 +29,28 @@ for directory in os.listdir(final):
 		kism = metadata["क़िस्म"]
 		metadata_string = f"-metadata title=\"{directory}\" -metadata genre=\"{kism}\" "
 
-		if metadata["कलाकार"]:
-			metadata_string += f' -metadata artist="{", ".join(metadata["कलाकार"])}"'
-		if metadata["गीतकार"]:
-			metadata_string += f' -metadata composer="{metadata["गीतकार"]}"'
-		if metadata["फ़िल्म"]:
-			metadata_string += f' -metadata album="{metadata["फ़िल्म"]}"'
-		if "साल" in metadata and metadata["साल"]:
-			metadata_string += f' -metadata year="{metadata["साल"]}"'
-		if bol:
-			metadata_string += f" -metadata lyrics=\"{bol}\""
+	if metadata["कलाकार"]:
+		metadata_string += f' -metadata artist="{", ".join(metadata["कलाकार"])}"'
+	if metadata["गीतकार"]:
+		metadata_string += f' -metadata composer="{metadata["गीतकार"]}"'
+	if metadata["फ़िल्म"]:
+		metadata_string += f' -metadata album="{metadata["फ़िल्म"]}"'
+	if metadata["बोल"]:
+		metadata_string += f' -metadata lyricist="{metadata["बोल"]}"'
 
-		if kism not in kisms: kisms.append(kism)
-		dest = f"{gen}/{kism}/{directory}.mp3"
-		for playlist in metadata["प्लेलिस्ट"]:
-			add_to_playlist(dest, playlist, metadata["प्लेलिस्ट"][playlist])
+	if "साल" in metadata and metadata["साल"]:
+		metadata_string += f' -metadata year="{metadata["साल"]}"'
+	if bol:
+		metadata_string += f" -metadata lyrics=\"{bol}\""
 
-		os.makedirs(os.path.dirname(dest), exist_ok=True)
+	if kism not in kisms: kisms.append(kism)
+	dest = f"{gen}/{kism}/{directory}.mp3"
+	for playlist in metadata["प्लेलिस्ट"]:
+		add_to_playlist(dest, playlist, metadata["प्लेलिस्ट"][playlist])
 
-		exec(f"ffmpeg -i \"{final}/{directory}/गीत.mp3\" -c copy {metadata_string} \"{dest}\"")
+	os.makedirs(os.path.dirname(dest), exist_ok=True)
+
+	exec(f"ffmpeg -i \"{final}/{directory}/गीत.mp3\" -c copy {metadata_string} \"{dest}\"")
 
 os.makedirs(f'{gen}/प्लेलिस्ट', exist_ok=True)
 os.makedirs(f'{gen}/.प्लेलिस्ट', exist_ok=True)

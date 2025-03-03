@@ -1,1 +1,3 @@
 # music-repo
+
+Requires ffmpeg

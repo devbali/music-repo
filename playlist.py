@@ -1,6 +1,10 @@
+# Playlist Maker
+# Usage is python playlist.py [playlist-name]
+# Opens a CLI interface with all songs downloaded in the intermediate directory
+# Allows you to add songs in order
+
 import os
 import json
-import shutil
 import sys
 
 final = "Final"
@@ -8,8 +12,6 @@ final = "Final"
 def exec (cmd):
 	print(f"CMD: {cmd}")
 	os.system(cmd)
-
-
 
 playlist = sys.argv[1]
 
