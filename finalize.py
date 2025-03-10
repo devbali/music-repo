@@ -1,5 +1,6 @@
 # Finalize
-from . import exec, final, config
+import sys
+from _imports import exec, final, config
 import os
 import sys
 import json
@@ -14,13 +15,13 @@ naam = input(f"{config['information-prompts']['name']}: ")
 exec(f'mkdir "{final}/{naam}"')
 
 suffix = input("Crop (ffmeg suffix): ")
-exec(f"ffmpeg -i \"{filename}\" {suffix} \"{final}/{naam}/{config['information-prompts']['song-filename']}.mp3\"")
+exec(f"ffmpeg -i \"{filename}\" {suffix} \"{final}/{naam}/{config['information-prompts']['song-filename']}\"")
 
 other_info_config = config['information-prompts']['other-info']
 
 ittila = {
 	** {
-		k: input(f"{k}: ") if other_info_config[k]["type"] == "str" else input(f"{k}: ").split(",")
+		k["name"]: input(f"{k['name']}: ") if k["type"] == "str" else input(f"{k['name']}: ").split(",")
 			for k in other_info_config
 	},
 	config["information-prompts"]["playlist"]: {}

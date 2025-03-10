@@ -2,14 +2,15 @@
 # Assumes linux
 
 import os
-
-final = "/home/dev/Music/गीत/Final"
+from _imports import final, config
 
 for directory in os.listdir(final):
-	path = f'{final}/{directory}'
+	path = os.path.join(final, directory)
 	num = len([f for f in os.listdir(path) 
-    	if f.endswith('.mp3') and os.path.isfile(os.path.join(path, f))])
-	geet = "गीत.mp3"
+		if os.path.isfile(os.path.join(path, f)) and f.endswith('.mp3')])
+
+	geet = config["information-prompts"]["song-filename"]
 	if num == 2:
 		os.chdir(path)
 		os.system(f"rm '{geet}' && mv *.mp3 '{geet}'")
+		print(f"Replaced in {directory}")

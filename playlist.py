@@ -7,7 +7,10 @@ import os
 import json
 import sys
 
-final = "Final"
+from _imports import final, config
+
+playlist_label = config["information-prompts"]["playlist"]
+info_filename = config["information-prompts"]["info-filename"]
 
 def exec (cmd):
 	print(f"CMD: {cmd}")
@@ -18,14 +21,14 @@ playlist = sys.argv[1]
 def read_from (final):
 	metadatas = []
 	for directory in os.listdir(final):
-		with open(f'{final}/{directory}/इत्तिला.json', 'rb') as info_file:
+		with open(f'{final}/{directory}/{info_filename}', 'rb') as info_file:
 			metadata = json.load(info_file)
 			metadatas.append((directory, metadata))
 	return metadatas
 
 def write_to (metadatas, final):
 	for directory,metadata in metadatas:
-		with open(f'{final}/{directory}/इत्तिला.json', 'w') as info_file:
+		with open(f'{final}/{directory}/{info_filename}', 'w') as info_file:
 			info_file.write(json.dumps(metadata, indent=4))
 
 while True:
@@ -36,12 +39,17 @@ while True:
 	for i in range(len(metadatas)):
 		directory, metadata = metadatas[i]
 
-		if playlist in metadata["प्लेलिस्ट"]:
-			in_list.append((i, metadata["प्लेलिस्ट"][playlist]))
+		if playlist in metadata[playlist_label]:
+			in_list.append((i, metadata[playlist_label][playlist]))
 		else:
 			out_list.append(i)
-	
-	outformatted = sorted([(index, metadatas[index][0], metadatas[index][1]["क़िस्म"]) for index in out_list], key=lambda a:a[2])
+
+	kism = None
+	for tags in config["information-prompts"]["other-info"]:
+		if tags["metadata-name"] == "genre":
+			kism = tags["name"]
+
+	outformatted = sorted([(index, metadatas[index][0], metadatas[index][1][kism] if kism else metadatas[index][0]) for index in out_list], key=lambda a: (a[2], a[1]))
 	for index, name, genre in outformatted:
 		print(f"{index: >3} {name : <50}{genre}")
 
@@ -58,8 +66,8 @@ while True:
 		break
 
 	if score == "": # remove
-		metadatas[number][1]["प्लेलिस्ट"].pop(playlist, None)
+		metadatas[number][1][playlist_label].pop(playlist, None)
 	else:
-		metadatas[number][1]["प्लेलिस्ट"][playlist] = int(score)
+		metadatas[number][1][playlist_label][playlist] = int(score)
 
 	write_to(metadatas, final)

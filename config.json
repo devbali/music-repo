@@ -5,7 +5,7 @@
     "information-prompts": {
         "name": "नाम",
         "playlist": "प्लेलिस्ट",
-        "song-filename": "गीत.txt",
+        "song-filename": "गीत.mp3",
         "info-filename": "इत्तिला.json",
         "lyrics-filename": "बोल.txt",
         "other-info": [
